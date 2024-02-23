@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Website Landing Page Design</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="all.min.css">
+</head>
+<body>
+
+<section>
+  <header>
+    <h2><a href="#" class="logo">Prodigy Responsive Page</a></h2>
+    <input type="checkbox" id="check">
+    <label for="check" class="menu-btn"><i class="fas fa-bars"></i></label>
+    <label for="check" class="close-btn"><i class="fas fa-times"></i></label>
+    <div class="navigation">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Info</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </div>
+  </header>
+  <div class="content">
+    <div class="info">
+      <h2>Like Nature <br><span>Be Creative!</span></h2>
+      <p>Embrace the essence of nature's boundless creativity, and let it inspire the depths of your own imagination. Like nature, be endlessly inventive, beautifully intricate, and wonderfully diverse. Let your creativity flow like a river, carving its path through the landscape of possibilities, painting the world with the vibrant hues of innovation and originality.</p>
+      <button class="info-btn" onclick="openPopup()">More Info</button>
+    </div>
+  </div>
+  <div class="media-icons">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+  </div>
+</section>
+
+<script>
+  const menuBtn = document.querySelector('.menu-btn');
+  const closeBtn = document.querySelector('.close-btn');
+  const navigation = document.querySelector('.navigation');
+
+  menuBtn.addEventListener('click', () => {
+    navigation.classList.toggle('active');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    navigation.classList.remove('active');
+  });
+
+  function openPopup() {
+    window.open('popup.html', 'popup', 'width=400,height=400');
+  }
+</script>
+
+</body>
+</html>
